@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2018 at 10:29 AM
+-- Generation Time: Dec 17, 2018 at 03:19 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -71,6 +71,25 @@ INSERT INTO `data_buku` (`id_buku`, `judul`, `pengarang`, `tahun_terbit`, `jumla
 ('H127', 'Teori Bahasa dan Otomata', 'John Dham', 2013, 2),
 ('J81', 'Pemrograman Berbasis Objek', 'Adam Smith', 2000, 5);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`) VALUES
+(1, 'rinyyustica', '$2y$10$2TVvGZu2c5TFhQE6yhlchepjViDWubf8F4C8nLl93H2CtA0qVewkC');
+
 --
 -- Indexes for dumped tables
 --
@@ -86,6 +105,22 @@ ALTER TABLE `data_anggota`
 --
 ALTER TABLE `data_buku`
   ADD PRIMARY KEY (`id_buku`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
