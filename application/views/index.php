@@ -79,10 +79,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
-                        <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
-                            <form class="app-search">
-                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a>
-                            </form>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url('index.php/logout') ?>" class="btn btn-secondary mt-3">Keluar</a>
                         </li>
                         <!-- ============================================================== -->
                         <!-- Profile -->
